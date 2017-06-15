@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  bitcore:
+    container_name: bitcore
+    build: .
+    restart: always
+    environment:
+      - TZ=Asia/Seoul
+    ports:
+      - 80:3001
+    volumes:
+    - data:/src/data
+    - node_modules:/usr/local/lib/node_modules
+
+volumes:
+  data:
+  node_modules:
