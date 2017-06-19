@@ -12,7 +12,7 @@ COPY . /src
 WORKDIR /src
 
 RUN \
-  mv config/livenet.json ./bitcore-node.json && \
+  mv config/testnet.json ./bitcore-node.json && \
   npm install
 
 EXPOSE 3001

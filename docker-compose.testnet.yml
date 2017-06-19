@@ -3,7 +3,7 @@ version: '2'
 services:
   bitcore:
     container_name: bitcore
-    build: .
+    build: ./Dockerfile.testnet
     restart: always
     environment:
       - TZ=Asia/Seoul
@@ -13,6 +13,7 @@ services:
     volumes:
       - data:/src/data
       - node_modules:/usr/local/lib/node_modules
+    command: bitcored
 
 volumes:
   data:
