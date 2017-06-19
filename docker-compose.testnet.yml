@@ -3,17 +3,17 @@ version: '2'
 services:
   bitcore:
     container_name: bitcore
-    build: ./Dockerfile.testnet
+    build: .
     restart: always
     environment:
       - TZ=Asia/Seoul
+      - NETWORK=testnet
     ports:
       - 80:3001
       - 8333
     volumes:
       - data:/src/data
       - node_modules:/usr/local/lib/node_modules
-    command: bitcored
 
 volumes:
   data:

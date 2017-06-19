@@ -12,15 +12,17 @@ COPY . /src
 WORKDIR /src
 
 RUN \
-  mv config/livenet.json ./bitcore-node.json && \
   npm install
+
+ARG TZ
+ARG NETWORK
+
+ENV TZ $TZ
+ENV NETWORK $NETWORK
 
 EXPOSE 3001
 EXPOSE 8333
 
-ARG TZ
-
-ENV TZ $TZ
-
 CMD \
+  mv ./config/$NETWORK.json ./bitcore-node.json &&  \
   bitcored
