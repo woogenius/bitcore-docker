@@ -24,5 +24,5 @@ EXPOSE 3001
 EXPOSE 8333
 
 CMD \
-  mv ./config/$NETWORK.json ./bitcore-node.json &&  \
+  cp -rf ./config/$NETWORK.json ./bitcore-node.json &&  \
   bitcored
