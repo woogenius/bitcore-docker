@@ -13,6 +13,13 @@
         "datadir": "./data",
         "exec": "/usr/local/lib/node_modules/bitcore/node_modules/bitcore-node/bin/bitcoind"
       }
+      "connect": [{
+        "rpchost": "127.0.0.1",
+        "rpcport": 18332,
+        "rpcuser": "mybtc",
+        "rpcpassword": "zV2UkHymzQwRGBkpXP2CFRGZLvp9",
+        "zmqpubrawtx": "tcp://127.0.0.1:30611"
+      }]
     }
   }
 }
